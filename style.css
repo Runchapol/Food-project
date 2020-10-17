@@ -1,0 +1,108 @@
+body{
+/*	background-color: #00A000;*/
+}
+img{
+	width: 250px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.img1{
+	width: auto;
+	height: 400px;
+}
+.fm{
+	width: 50%;
+	height: auto;
+}
+.Eff1:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+	box-shadow: 0 0 50px #FF0000;
+}
+.Eff1{
+	transition: box-shadow .5s, transform .5s;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+h1, h2, h3, h4, h5{
+	text-align: center;
+}
+.b01{
+	position: absolute;
+	width: 600px;
+	height: 400px;
+	right: -600px;
+	top: 0px;
+}
+.b02{
+	position: absolute;
+	right: -35px;
+	top: 40px;
+}
+.b03{
+	position: absolute;
+	right: -35px;
+	top: 290px;
+}
+.b04{
+	position: absolute;
+	right: 170px;
+	top: 50px;
+}
+.b05{
+	position: absolute;
+	right: 150px;
+	top: 290px;
+}
+
+.leftop{
+	position: relative;
+	animation-name: leftop;
+	animation-duration: 2.5s;
+}
+@keyframes leftop { 
+  from{ right: -1000px; opacity:0 ;transform: rotate(0deg);} 
+  to{ right: 0px; opacity:1 ;transform: rotate(-360deg);}
+}
+
+.rightop{
+	position: relative;
+	animation-name: rightop;
+	animation-duration: 2.5s;
+}
+@keyframes rightop { 
+  from{ right: 1000px; opacity:0 ;transform: rotate(0deg);} 
+  to{ right: 0px; opacity:1 ;transform: rotate(360deg);}
+}
+
+.Eff_2{
+	position: relative;
+	animation-name: Eff_2;
+	animation-duration: 1.5s;
+}
+@keyframes Eff_2 { 
+  from{ bottom: -100px; opacity:0 ;} 
+  to{ bottom: 0px; opacity:1 ;}
+}
+
+.Eff_3{
+	animation-name: Eff_3;
+	animation-duration: 1.5s;
+}
+@keyframes Eff_3 { 
+  from{ transform: rotate(90deg); opacity:0 ;} 
+  to{ transform: rotate(0deg); opacity:1 ;}
+}
+
+.Eff_4{
+	position: relative;
+	animation-name: Eff_4;
+	animation-duration: 1.5s;
+}
+@keyframes Eff_4 { 
+  from{ transform: scale(0); opacity:0 ;} 
+  to{ transform: scale(1); opacity:1 ;}
+}
