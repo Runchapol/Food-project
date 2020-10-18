@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h1>คำนวณ BMI</h1>
+		<div id="test">
+			<b><i>น้ำหนัก&emsp; (กิโลกรัม) :&emsp;</i></b><input type="number" placeholder="เช่น 50" v-model="w"><br>
+			<b><i>ส่วนสูง&emsp; (เมตร):&emsp;&emsp;&emsp;</i></b><input type="number" placeholder="เช่น 1.7" v-model="h">
+			<br>
+			<h5>ค่า BMI ของคุณคือ <br> {{cal()}} !</h5>
+			<div id="pic"></div>
+			<h5>{{res()}}</h5>
+		</div>
+	</div>
+
+	<script>
+		let app = new Vue({
+			el: '#test',
+			data: {
+				w: 0,
+				h: 1.5
+			},
+			methods:{
+				cal: function(){
+					let x = parseFloat(this.w)/(parseFloat(this.h)*parseFloat(this.h))
+					return x.toFixed(1)
+				},
+				res: function(){
+					var imgPng = {
+					  0:"-",
+					  1: "https://cdn.shopify.com/s/files/1/1061/1924/files/Cherry_Emoji_60x60.png",
+					  2: "img/02.jpg",
+					  3: "https://cdn.shopify.com/s/files/1/1061/1924/files/Orange_Emoji_60x60.png",
+					  4: "https://cdn.shopify.com/s/files/1/1061/1924/files/Grape_Emoji_60x60.png",
+					  5: "https://cdn.shopify.com/s/files/1/1061/1924/files/Watermelon_Emoji_60x60.png",
+					}
+					let a = this.cal()
+					if (a == 0) {
+						return "ใส่น้ำหนักกับส่วนสูงสิ !"
+					}
+					else if (a <= 18.5) {
+						var img = `<img src="${imgPng[1]}">`
+						document.getElementById("pic").innerHTML=img
+						return "คุณผอมเกินไป!"
+					}
+					else if (a > 18.5 && a <= 22.9) {
+						document.getElementById("pic").innerHTML=`<img src="${imgPng[2]}">`
+						return "คุณสมส่วน!"
+					}
+					else if (a > 22.9 && a <= 24.9) {
+						var img = `<img src="${imgPng[3]}">`
+						document.getElementById("pic").innerHTML=img
+						return "คุณน้ำหนักค่อนข้างมาก!"
+					}
+					else if (a > 24.9 && a <= 29.9) {
+						var img = `<img src="${imgPng[4]}">`
+						document.getElementById("pic").innerHTML=img
+						return "คุณอ้วนแล้วนะ!"
+					}
+					else{
+						var img = `<img src="${imgPng[5]}">`
+						document.getElementById("pic").innerHTML=img
+						return "คุณปริระยะสุดท้าย"
+					}
+				},
+			},
+		})
+	</script>
+</body>
+</html>
