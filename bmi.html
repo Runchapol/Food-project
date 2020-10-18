@@ -11,15 +11,15 @@
 </head>
 <body>
 	<div class="container">
-		<h1>คำนวณ BMI</h1>
+		<h1 class="Eff_2">คำนวณ BMI</h1>
 		<div id="test">
-			<b><i>น้ำหนัก&emsp; (กิโลกรัม) :&emsp;</i></b><input type="number" placeholder="เช่น 50" v-model="w"><br>
-			<b><i>ส่วนสูง&emsp; (เมตร):&emsp;&emsp;&emsp;</i></b><input type="number" placeholder="เช่น 1.7" v-model="h">
+			<b class="Eff_2"><i>น้ำหนัก&emsp; (กิโลกรัม) :&emsp;</i></b><input class="rightop" type="number" placeholder="เช่น 50" v-model="w"><br>
+			<b class="Eff_2"><i>ส่วนสูง&emsp; (เมตร):&emsp;&emsp;&emsp;</i></b><input class="leftop" type="number" placeholder="เช่น 1.7" v-model="h">
 			<br>
-			<h5>ค่า BMI ของคุณคือ <br> {{cal()}} !</h5>
+			<h5 class="Eff_2">ค่า BMI ของคุณคือ <br> {{cal()}} !</h5>
 			<div id="pic"></div>
-			<h5>{{res()}}</h5>
-			<h5>{{rec()}}</h5>
+			<h5 class="Eff_2">{{res()}}</h5>
+			<h5 class="Eff_2">{{rec()}}</h5>
 			<div id="rec"></div>
 		</div>
 		<br><br><br>
