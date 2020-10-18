@@ -13,6 +13,40 @@
 </head>
 <body>
 	<div class="container">
+		<br><h1>สารอาหาร 5 หมู่</h1><br><br>
+		<div class="fix">test</div>
+		<ul class="nav nav-tabs">
+			<li>
+                <a href="index.html">หน้าหลัก</a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <a href="bmi.html">คำนวณ BMI</a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <div class="dropdown" style="z-index: 3">
+                	<h5>สารอาหาร</h5>
+                	<div class="dropdown-content">
+                		<a href="prot.html">โปรตีน</a>
+                		<a href="">คาร์โบไฮเดรต</a>
+                		<a href="">วิตามิน</a>
+                		<a href="">เกลือแร่</a>
+                		<a href="">ไขมัน</a>
+                	</div>
+                </div>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <div class="dropdown" style="z-index: 3">
+                	<h5>เมนูยอดฮิต!</h5>
+                	<div class="dropdown-content">
+                		<a href="ttt.html">ข้าวขาหมู</a>
+                		<a href="">ข้าวไข่ดาว</a>
+                		<a href="">เบอร์เกอร์</a>
+                		<a href="">ราเม็ง</a>
+                	</div>
+                </div>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</ul>
+
 		<br><h1>ข้าวขาหมูววว</h1><br><br>
 		<div class="row">
 			<div class="col-4">
@@ -26,7 +60,7 @@
 		<hr>
 		<div class="row">
 			<div class="col-3" style="z-index: 2;">
-				<a href=""><h5 class="b02 Eff_3">โปรตีน<br>มี 62 กรัม<br>ได้แก่ ไข่ หมู</h5></a>
+				<a href=""><h5 class="b02 Eff_3">คาร์โบไฮเดรต<br>มี 22 กรัม<br>ได้แก่ ข้าว</h5></a>
 				<img src="img/lok.png" class="b01 Eff_4" >
 				<a href=""><h5 class="b03 Eff_3">ไขมัน<br>มี 18 กรัม<br>ได้แก่ น้ำมัน หนังหมู</h5></a>
 			</div>
@@ -34,16 +68,16 @@
 				<img class="img1 Eff_4" src="img/01.png">
 			</div>
 			<div class="col-3" style="z-index: 2;">
-				<a href=""><h5 class="b04 Eff_3">คาร์โบไฮเดรต<br>มี 22 กรัม<br>ได้แก่ ข้าว</h5></a>
-				<a href=""><h5 class="b05 Eff_3">วิตามิน<br>มี 2 กรัม<br>ได้แก่ ผักใบเขียว</h5></a>
+				<a href=""><h5 class="b04 Eff_3">วิตามิน<br>มี 2 กรัม<br>ได้แก่ ผักใบเขียว</h5></a>
+				<a href=""><h5 class="b05 Eff_3">โปรตีน<br>มี 62 กรัม<br>ได้แก่ ไข่ หมู</h5></a>
 			</div>
 		</div>
 		<hr>
 		<div>
-		<h2 class="Eff_2">คุณคิดว่าข้าวขาหมูจานนี้ กี่แคลลอลี่</h2>
-		<h3 class="Eff_2">เก็บคำตอบไว้ในใจ แล้วมาดูกัน!</h3>
-		<img src="img/frame.png" id="ans" style="opacity: 0;transition: 2s; z-index: 1" class="fm">
-		<img src="img/ans.png" onclick="ans()" id="frm" style="transition: 1s; position: relative; z-index: 2;bottom: 275px" class="fm Eff_4">
+			<h2 class="Eff_2">คุณคิดว่าข้าวขาหมูจานนี้ กี่แคลลอลี่</h2>
+			<h3 class="Eff_2">เก็บคำตอบไว้ในใจ แล้วมาดูกัน!</h3>
+			<img src="img/frame.png" id="ans" style="opacity: 0;transition: 2s; z-index: 1" class="fm">
+			<img src="img/ans.png" onclick="ans()" id="frm" style="transition: 1s; position: relative; z-index: 2;bottom: 275px" class="fm Eff_4">
 		</div>
 		<br>
 		<a href="javascript:history.back(1)">กลับจ้า</a>
@@ -51,8 +85,6 @@
 		<br><br>
 	</div>
 
-
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script>
 		function ans(){
 			document.getElementById("ans").style.opacity = "1";
