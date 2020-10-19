@@ -56,10 +56,10 @@
 			<b class="Eff_2"><i>น้ำหนัก&emsp; (กิโลกรัม) :&emsp;</i></b><input class="rightop" type="number" placeholder="เช่น 50" v-model="w"><br>
 			<b class="Eff_2"><i>ส่วนสูง&emsp; (เมตร):&emsp;&emsp;&emsp;</i></b><input class="leftop" type="number" placeholder="เช่น 1.7" v-model="h">
 			<br>
-			<h5 class="Eff_2">ค่า BMI ของคุณคือ <br> {{cal()}} !</h5>
-			<div id="pic"></div>
-			<h5 class="Eff_2">{{res()}}</h5>
-			<h5 class="Eff_2">{{rec()}}</h5>
+			<h5 class="Eff_2">ค่า BMI ของคุณคือ <br><font style="font-size: 50px;"> {{cal()}} !</font></h5>
+			<div id="pic"></div><br>
+			<h5 class="Eff_2" style="font-size: 40px;">{{res()}}</h5>
+			<h5 class="Eff_2" style="font-size: 30px;">{{rec()}}</h5>
 			<div id="rec"></div>
 		</div>
 		<br><br><br>
@@ -93,26 +93,26 @@
 						return "ใส่น้ำหนักกับส่วนสูงสิ!"
 					}
 					else if (a <= 18.5) {
-						var img = `<img src="${imgPng[1]}">`
+						var img = `<img src="${imgPng[1]}" style="width:auto; height:400px;">`
 						document.getElementById("pic").innerHTML=img
 						return "คุณผอมเกินไป!"
 					}
 					else if (a > 18.5 && a <= 22.9) {
-						document.getElementById("pic").innerHTML=`<img src="${imgPng[2]}">`
+						document.getElementById("pic").innerHTML=`<img src="${imgPng[2]}" style="width:auto; height:400px;">`
 						return "คุณสมส่วน!"
 					}
 					else if (a > 22.9 && a <= 24.9) {
-						var img = `<img src="${imgPng[3]}">`
+						var img = `<img src="${imgPng[3]}" style="width:auto; height:400px;">`
 						document.getElementById("pic").innerHTML=img
 						return "คุณน้ำหนักค่อนข้างมาก!"
 					}
 					else if (a > 24.9 && a <= 29.9) {
-						var img = `<img src="${imgPng[4]}">`
+						var img = `<img src="${imgPng[4]}" style="width:auto; height:400px;">`
 						document.getElementById("pic").innerHTML=img
 						return "คุณอ้วนแล้วนะ!"
 					}
 					else{
-						var img = `<img src="${imgPng[5]}">`
+						var img = `<img src="${imgPng[5]}" style="width:auto; height:400px;">`
 						document.getElementById("pic").innerHTML=img
 						return "คุณปริระยะสุดท้าย!"
 					}
@@ -120,25 +120,25 @@
 				rec: function(){
 					let a = this.cal()
 					if (a == 0) {
-						return "แล้วเราจะแนะนำให้คุณ!"
+						return "แล้วเราจะแนะนำให้คุณเอง!"
 					}
 					else if (a <= 18.5) {
 						var img = `<div class="row">
 										<div class="col-3">
 											<a href="ttt.html"><h2>ข้าวขาหมู</h2><br>
-											<img class="Eff1" src="img/01.jpg"></a>
+											<img class="Eff1" src="img/kamu01.png"></a>
 										</div>
 										<div class="col-3">
-											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
-											<img class="Eff1" src="img/02.jpg"></a>
+											<a href="munkai.html"><h2>ข้าวมันไก่</h2><br>
+											<img class="Eff1" src="img/Munkai.png"></a>
 										</div>
 										<div class="col-3">
 											<a href=".html"><h2>เบอร์เกอร์</h2><br>
-											<img class="Eff1" src="img/03.jpg"></a>
+											<img class="Eff1" src="img/bk01.png"></a>
 										</div>
 										<div class="col-3">
-											<a href=".html"><h2>ราเม็ง</h2><br>
-											<img class="Eff1" src="img/04.jpg"></a>
+											<a href=".html"><h2>สเต็ก</h2><br>
+											<img class="Eff1" src="img/Steak.png"></a>
 										</div>
 									</div>`
 						document.getElementById("rec").innerHTML=img
@@ -146,13 +146,17 @@
 					}
 					else if (a > 18.5 && a <= 22.9) {
 						var img = `<div class="row">
-										<div class="col-6">
+										<div class="col-4">
 											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
-											<img class="Eff1" src="img/02.jpg"></a>
+											<img class="Eff1" src="img/kaijeaw.png"></a>
 										</div>
-										<div class="col-6">
+										<div class="col-4">
 											<a href=".html"><h2>ราเม็ง</h2><br>
-											<img class="Eff1" src="img/04.jpg"></a>
+											<img class="Eff1" src="img/ramen.png"></a>
+										</div>
+										<div class="col-4">
+											<a href=".html"><h2>สเต็ก</h2><br>
+											<img class="Eff1" src="img/Steak.png"></a>
 										</div>
 									</div>`
 						document.getElementById("rec").innerHTML=img
@@ -160,13 +164,17 @@
 					}
 					else if (a > 22.9 && a <= 24.9) {
 						var img = `<div class="row">
-										<div class="col-6">
+										<div class="col-4">
 											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
-											<img class="Eff1" src="img/02.jpg"></a>
+											<img class="Eff1" src="img/kaijeaw.png"></a>
 										</div>
-										<div class="col-6">
-											<a href=".html"><h2>ราเม็ง</h2><br>
-											<img class="Eff1" src="img/04.jpg"></a>
+										<div class="col-4">
+											<a href=".html"><h2>ข้าวกะเพราไข่ดาว</h2><br>
+											<img class="Eff1" src="img/Kapal.png"></a>
+										</div>
+										<div class="col-4">
+											<a href=".html"><h2>สเต็ก</h2><br>
+											<img class="Eff1" src="img/Steak.png"></a>
 										</div>
 									</div>`
 						document.getElementById("rec").innerHTML=img
@@ -176,11 +184,11 @@
 						var img = `<div class="row">
 										<div class="col-6">
 											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
-											<img class="Eff1" src="img/02.jpg"></a>
+											<img class="Eff1" src="img/kaijeaw.png"></a>
 										</div>
 										<div class="col-6">
-											<a href=".html"><h2>ราเม็ง</h2><br>
-											<img class="Eff1" src="img/04.jpg"></a>
+											<a href=".html"><h2>ข้าวผัดกุ้ง</h2><br>
+											<img class="Eff1" src="img/kk02.png"></a>
 										</div>
 									</div>`
 						document.getElementById("rec").innerHTML=img
@@ -190,11 +198,11 @@
 						var img = `<div class="row">
 										<div class="col-6">
 											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
-											<img class="Eff1" src="img/02.jpg"></a>
+											<img class="Eff1" src="img/kaijeaw.png"></a>
 										</div>
 										<div class="col-6">
 											<a href=".html"><h2>ราเม็ง</h2><br>
-											<img class="Eff1" src="img/04.jpg"></a>
+											<img class="Eff1" src="img/ramen.png"></a>
 										</div>
 									</div>`
 						document.getElementById("rec").innerHTML=img
