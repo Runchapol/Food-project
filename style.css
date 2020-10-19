@@ -5,8 +5,8 @@ html,body {
     background-repeat: no-repeat;
 }
 img{
-	width: 250px;
-	height: 250px;
+	width: 150px;
+	height: 150px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5{
 	position: relative;
 	animation-name: Eff_2;
 	animation-duration: 1.5s;
+	
 }
 @keyframes Eff_2 { 
   from{ bottom: -100px; opacity:0 ;} 
