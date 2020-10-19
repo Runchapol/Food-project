@@ -189,11 +189,12 @@ h1, h2, h3, h4, h5{
 
 .fix{
 	position: fixed;
+	border-radius: 25%;
 	top: 50%;
 	right: 5%;
 	width: 100px;
 	height: 100px;
-	background-color: #C8386B;
+	background-image: url('img/bmi.png');
 }
 a{
 	color: #00BFFF;
