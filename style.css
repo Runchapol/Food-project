@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5{
 .fix{
 	position: fixed;
 	border-radius: 25%;
-	top: 50%;
+	top: 40%;
 	right: 5%;
 	width: 100px;
 	height: 100px;
