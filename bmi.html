@@ -11,6 +11,42 @@
 </head>
 <body>
 	<div class="container">
+		<br><h1>สารอาหาร 5 หมู่</h1><br><br>
+		<div class="fix">
+			<a href="bmi.html"><h5 style="margin-top: 20px;">ลองวัดค่า BMI กัน!</h5></a>
+		</div>
+		<ul class="nav nav-tabs">
+			<li>
+                <a href="index.html"><h5>หน้าหลัก</h5></a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <a href="bmi.html"><h5>คำนวณ BMI</h5></a>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <div class="dropdown" style="z-index: 3">
+                	<h5>สารอาหาร</h5>
+                	<div class="dropdown-content">
+                		<a href="prot.html">โปรตีน</a>
+                		<a href="">คาร์โบไฮเดรต</a>
+                		<a href="">วิตามิน</a>
+                		<a href="">เกลือแร่</a>
+                		<a href="">ไขมัน</a>
+                	</div>
+                </div>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <li>
+                <div class="dropdown" style="z-index: 3">
+                	<h5>เมนูยอดฮิต!</h5>
+                	<div class="dropdown-content">
+                		<a href="ttt.html">ข้าวขาหมู</a>
+                		<a href="kaijeaw.html">ข้าวไข่เจียว</a>
+                		<a href="burger.html">เบอร์เกอร์</a>
+                		<a href="ramen.html">ราเม็ง</a>
+                	</div>
+                </div>
+            </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</ul>
+		
 		<h1 class="Eff_2">คำนวณ BMI</h1>
 		<div id="test">
 			<b class="Eff_2"><i>น้ำหนัก&emsp; (กิโลกรัม) :&emsp;</i></b><input class="rightop" type="number" placeholder="เช่น 50" v-model="w"><br>
@@ -85,15 +121,19 @@
 					}
 					else if (a <= 18.5) {
 						var img = `<div class="row">
-										<div class="col-4">
+										<div class="col-3">
 											<a href="ttt.html"><h2>ข้าวขาหมู</h2><br>
 											<img class="Eff1" src="img/01.jpg"></a>
 										</div>
-										<div class="col-4">
+										<div class="col-3">
+											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
+											<img class="Eff1" src="img/02.jpg"></a>
+										</div>
+										<div class="col-3">
 											<a href=".html"><h2>เบอร์เกอร์</h2><br>
 											<img class="Eff1" src="img/03.jpg"></a>
 										</div>
-										<div class="col-4">
+										<div class="col-3">
 											<a href=".html"><h2>ราเม็ง</h2><br>
 											<img class="Eff1" src="img/04.jpg"></a>
 										</div>
@@ -102,23 +142,51 @@
 						return "เราขอแนะนำ!"
 					}
 					else if (a > 18.5 && a <= 22.9) {
+						var img = `<div class="row">
+										<div class="col-6">
+											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
+											<img class="Eff1" src="img/02.jpg"></a>
+										</div>
+										<div class="col-6">
+											<a href=".html"><h2>ราเม็ง</h2><br>
+											<img class="Eff1" src="img/04.jpg"></a>
+										</div>
+									</div>`
 						document.getElementById("rec").innerHTML=img
 						return "เราขอแนะนำ!"
 					}
 					else if (a > 22.9 && a <= 24.9) {
-						var img = `<img src="${imgPng[3]}">`
+						var img = `<div class="row">
+										<div class="col-6">
+											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
+											<img class="Eff1" src="img/02.jpg"></a>
+										</div>
+										<div class="col-6">
+											<a href=".html"><h2>ราเม็ง</h2><br>
+											<img class="Eff1" src="img/04.jpg"></a>
+										</div>
+									</div>`
 						document.getElementById("rec").innerHTML=img
 						return "เราขอแนะนำ!"
 					}
 					else if (a > 24.9 && a <= 29.9) {
-						var img = `<img src="${imgPng[4]}">`
+						var img = `<div class="row">
+										<div class="col-6">
+											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
+											<img class="Eff1" src="img/02.jpg"></a>
+										</div>
+										<div class="col-6">
+											<a href=".html"><h2>ราเม็ง</h2><br>
+											<img class="Eff1" src="img/04.jpg"></a>
+										</div>
+									</div>`
 						document.getElementById("rec").innerHTML=img
 						return "เราขอแนะนำ!"
 					}
 					else{
 						var img = `<div class="row">
 										<div class="col-6">
-											<a href=".html"><h2>ข้าวไข่ดาว</h2><br>
+											<a href=".html"><h2>ข้าวไข่เจียว</h2><br>
 											<img class="Eff1" src="img/02.jpg"></a>
 										</div>
 										<div class="col-6">
