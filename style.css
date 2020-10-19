@@ -101,6 +101,11 @@ h1, h2, h3, h4, h5{
 	right: 150px;
 	top: 200px;
 }
+.e06{
+	position: absolute;
+	right: 1px;
+	top: 270px;
+}
 
 .leftop{
 	position: relative;
